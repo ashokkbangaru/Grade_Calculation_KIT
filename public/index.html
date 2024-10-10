@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grade Calculator</h1>
+
+        <div class="tabs">
+            <div class="tab">
+                <h3>Thesis</h3>
+                <input type="number" id="thesis_grade" placeholder="Grade">
+                <input type="number" id="thesis_credits" placeholder="Credits">
+            </div>
+            <div class="tab">
+                <h3>Basic</h3>
+                <input type="number" id="basic_grade" placeholder="Grade">
+                <input type="number" id="basic_credits" placeholder="Credits">
+            </div>
+            <div class="tab">
+                <h3>Compulsory</h3>
+                <input type="number" id="compulsory_grade" placeholder="Grade">
+                <input type="number" id="compulsory_credits" placeholder="Credits">
+            </div>
+            <div class="tab">
+                <h3>Elective</h3>
+                <input type="number" id="elective_grade" placeholder="Grade">
+                <input type="number" id="elective_credits" placeholder="Credits">
+            </div>
+        </div>
+
+        <button onclick="submitGrades()">Calculate Overall Grade</button>
+
+        <div id="result"></div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
