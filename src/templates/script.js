@@ -19,7 +19,7 @@ function submitGrades() {
         elective_credits
     };
 
-    fetch('/calculate_grades', {
+    fetch('/GRADE_CALCULATION_KIT', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

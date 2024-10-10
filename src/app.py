@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/calculate_grades', methods=['POST'])
+@app.route('/GRADE_CALCULATION_KIT', methods=['POST'])
 def calculate_grades():
     data = request.json
 
