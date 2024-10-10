@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
@@ -13,31 +13,43 @@
         <div class="tabs">
             <div class="tab">
                 <h3>Thesis</h3>
-                <input type="number" id="thesis_grade" placeholder="Grade">
-                <input type="number" id="thesis_credits" placeholder="Credits">
+                <div class="grades thesis-grades">
+                    <input type="number" class="grade thesis_grade" placeholder="Grade">
+                    <input type="number" class="credit thesis_credits" placeholder="Credits">
+                </div>
+                <button onclick="addGradeInput('Thesis')">Add More Grades</button>
             </div>
             <div class="tab">
                 <h3>Basic</h3>
-                <input type="number" id="basic_grade" placeholder="Grade">
-                <input type="number" id="basic_credits" placeholder="Credits">
+                <div class="grades basic-grades">
+                    <input type="number" class="grade basic_grade" placeholder="Grade">
+                    <input type="number" class="credit basic_credits" placeholder="Credits">
+                </div>
+                <button onclick="addGradeInput('Basic')">Add More Grades</button>
             </div>
             <div class="tab">
                 <h3>Compulsory</h3>
-                <input type="number" id="compulsory_grade" placeholder="Grade">
-                <input type="number" id="compulsory_credits" placeholder="Credits">
+                <div class="grades compulsory-grades">
+                    <input type="number" class="grade compulsory_grade" placeholder="Grade">
+                    <input type="number" class="credit compulsory_credits" placeholder="Credits">
+                </div>
+                <button onclick="addGradeInput('Compulsory')">Add More Grades</button>
             </div>
             <div class="tab">
                 <h3>Elective</h3>
-                <input type="number" id="elective_grade" placeholder="Grade">
-                <input type="number" id="elective_credits" placeholder="Credits">
+                <div class="grades elective-grades">
+                    <input type="number" class="grade elective_grade" placeholder="Grade">
+                    <input type="number" class="credit elective_credits" placeholder="Credits">
+                </div>
+                <button onclick="addGradeInput('Elective')">Add More Grades</button>
             </div>
         </div>
 
         <button onclick="submitGrades()">Calculate Overall Grade</button>
 
-        <div id="result"></div>
+        <div id="result" class="result-box"></div>
 
-        <script src="script.js"></script>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
     </div>
 </body>
 </html>
