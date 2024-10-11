@@ -57,5 +57,42 @@ Open your browser and go to:
 ```bash
 http://127.0.0.1:5000/
 ```
+## Live Demo
+Want to try the app without setting it up locally? Check out our live demo hosted at:
+https://grade-calculator-latest.onrender.com
+
+# Publishing Docker Image to Docker Hub
+
+Follow these steps to publish your Docker image from Docker Desktop to Docker Hub.
+
+## Prerequisites:
+1. **Install Docker Desktop**: Ensure Docker Desktop is installed and running.
+2. **Docker Hub Account**: Create an account at [Docker Hub](https://hub.docker.com/) if you don't have one.
+3. **Login to Docker Hub**: Log in via Docker Desktop or the command line.
+
+## Steps to Publish Docker Image:
+
+### 1. Log in to Docker Hub:
+
+- **Via Docker Desktop**: Open Docker Desktop, click your account icon, and log in.
+- **Via Command Line**: Run:
+    ```bash
+    docker login
+    ```
+  Enter your Docker Hub **username** and **password**.
+
+### 2. Tag Your Docker Image:
+Tag your local image using the format:
+```bash
+docker tag local-image-name dockerhub-username/repository-name:tag
+```
+Example: docker tag grade-calculator your-dockerhub-username/grade-calculator:latest
+
+###  3. Push the Docker Image:
+Push the image to Docker Hub:
+```bash
+docker push your-dockerhub-username/grade-calculator:latest
+```
+
 
 Enjoy using Grade Calculator! 😊
