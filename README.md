@@ -14,10 +14,48 @@ This project is free and open for public use. Feel free to contribute or provide
 
 ## 1. Clone the Repository:
 Clone this repository to your local machine:
-
 ```bash
-git clone https://github.com/yourusername/grade-calculator.git
-cd grade-calculator
+git clone https://github.com/ashokkbangaru/Grade_Calculation_KIT.git
+cd Grade_Calculation_KIT
+```
 
+## 2. Create a Virtual Environment:
+Create a virtual environment to manage your dependencies:
+```bash
+# On macOS/Linux
+python3 -m venv venv
+
+# On Windows
+python -m venv venv
+```
+
+## 3. Activate the Virtual Environment:
+Activate the virtual environment:
+```bash
+# On macOS/Linux
+source venv/bin/activate
+
+# On Windows
+venv\Scripts\activate
+```
+
+## 4. Install Dependencies:
+Install the required Python packages:
+```bash
+pip install -r requirements.txt
+```
+
+## 5. Run the Application:
+After the dependencies are installed, run the application:
+```bash
+cd .\src\
+python .\app.py
+```
+
+## 6. Access the App:
+Open your browser and go to:
+```bash
+http://127.0.0.1:5000/
+```
 
 Enjoy using Grade Calculator! 😊
