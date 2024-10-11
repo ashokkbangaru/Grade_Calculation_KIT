@@ -11,37 +11,84 @@
         <h1>Grade Calculator</h1>
 
         <div class="tabs">
+            <!-- Thesis Tab -->
             <div class="tab">
                 <h3>Thesis</h3>
-                <div class="grades thesis-grades">
-                    <input type="number" class="grade thesis_grade" placeholder="Grade">
-                    <input type="number" class="credit thesis_credits" placeholder="Credits">
-                </div>
-                <button onclick="addGradeInput('Thesis')">Add More Grades</button>
+                <table class="grades-table" id="thesis-grades-table">
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Credit Points</th>
+                        </tr>
+                    </thead>
+                    <tbody class="thesis-grades">
+                        <tr>
+                            <td><input type="number" class="grade thesis_grade" placeholder="Grade"></td>
+                            <td><input type="number" class="credit thesis_credits" placeholder="Credits"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button onclick="addGradeInput('Thesis')">Add More Rows</button>
             </div>
+
+            <!-- Basic Tab -->
             <div class="tab">
                 <h3>Basic</h3>
-                <div class="grades basic-grades">
-                    <input type="number" class="grade basic_grade" placeholder="Grade">
-                    <input type="number" class="credit basic_credits" placeholder="Credits">
-                </div>
-                <button onclick="addGradeInput('Basic')">Add More Grades</button>
+                <table class="grades-table" id="basic-grades-table">
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Credit Points</th>
+                        </tr>
+                    </thead>
+                    <tbody class="basic-grades">
+                        <tr>
+                            <td><input type="number" class="grade basic_grade" placeholder="Grade"></td>
+                            <td><input type="number" class="credit basic_credits" placeholder="Credits"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button onclick="addGradeInput('Basic')">Add More Rows</button>
             </div>
+
+            <!-- Compulsory Tab -->
             <div class="tab">
                 <h3>Compulsory</h3>
-                <div class="grades compulsory-grades">
-                    <input type="number" class="grade compulsory_grade" placeholder="Grade">
-                    <input type="number" class="credit compulsory_credits" placeholder="Credits">
-                </div>
-                <button onclick="addGradeInput('Compulsory')">Add More Grades</button>
+                <table class="grades-table" id="compulsory-grades-table">
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Credit Points</th>
+                        </tr>
+                    </thead>
+                    <tbody class="compulsory-grades">
+                        <tr>
+                            <td><input type="number" class="grade compulsory_grade" placeholder="Grade"></td>
+                            <td><input type="number" class="credit compulsory_credits" placeholder="Credits"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button onclick="addGradeInput('Compulsory')">Add More Rows</button>
             </div>
+
+            <!-- Elective Tab -->
             <div class="tab">
                 <h3>Elective</h3>
-                <div class="grades elective-grades">
-                    <input type="number" class="grade elective_grade" placeholder="Grade">
-                    <input type="number" class="credit elective_credits" placeholder="Credits">
-                </div>
-                <button onclick="addGradeInput('Elective')">Add More Grades</button>
+                <table class="grades-table" id="elective-grades-table">
+                    <thead>
+                        <tr>
+                            <th>Grade</th>
+                            <th>Credit Points</th>
+                        </tr>
+                    </thead>
+                    <tbody class="elective-grades">
+                        <tr>
+                            <td><input type="number" class="grade elective_grade" placeholder="Grade"></td>
+                            <td><input type="number" class="credit elective_credits" placeholder="Credits"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button onclick="addGradeInput('Elective')">Add More Rows</button>
             </div>
         </div>
 

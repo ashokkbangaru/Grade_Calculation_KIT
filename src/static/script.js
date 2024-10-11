@@ -16,7 +16,7 @@ function submitGrades() {
         const credit = parseFloat(creditInputs[index].value) || 0; // Default to 0 if not a number
 
         if (grade > 0 || credit > 0) { // Only include valid entries
-            data[`${category}`].push({ grade, credit });
+            data[category + "_grades"].push({ grade, credit });
         }
     });
 
@@ -35,13 +35,12 @@ function submitGrades() {
 }
 
 function addGradeInput(section) {
-    const newInputHTML = `
-        <input type="number" class="grade ${section.toLowerCase()}_grade" placeholder="Grade">
-        <input type="number" class="credit ${section.toLowerCase()}_credits" placeholder="Credits">
-    `;
-    const gradesDiv = document.querySelector(`.${section.toLowerCase()}-grades`);
-    const newDiv = document.createElement('div');
-    newDiv.className = 'grades';
-    newDiv.innerHTML = newInputHTML;
-    gradesDiv.appendChild(newDiv);
+    const newRowHTML = `
+        <tr>
+            <td><input type="number" class="grade ${section.toLowerCase()}_grade" placeholder="Grade"></td>
+            <td><input type="number" class="credit ${section.toLowerCase()}_credits" placeholder="Credits"></td>
+        </tr>`;
+    
+    const gradesTableBody = document.querySelector(`.${section.toLowerCase()}-grades`);
+    gradesTableBody.insertAdjacentHTML('beforeend', newRowHTML);
 }
